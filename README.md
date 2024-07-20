@@ -232,3 +232,16 @@ Test the trained model on a separate dataset of emails to evaluate its performan
     - **Input Data:** Features of houses, such as square footage, number of bedrooms, number of bathrooms, location, age of the house, etc.
     - **Output Value:** The predicted price of the house.
 
+# Regression
+
+- Regression is a statistical method that helps us understand and predict the relationship between variables.
+
+- Describes how one variable (dependent variable) changes as another variable (independent variable) changes.
+
+- Dependent Variable: We are trying to predict or explain(Y).
+
+- Independent Variable: that are used to predict or explain the changes in the dependent variable(X).
+
+**For example:** predicting salary based on years of experience, predicting exam score based on study hours, predicting resale price based on vehicle age.
+
+![image](https://github.com/user-attachments/assets/2a397e1c-4084-4f81-94c6-132bba97083d)
