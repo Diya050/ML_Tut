@@ -39,7 +39,7 @@ In Traditional programming, we will provide:
 In Machine Learning, we will provide:
 <br>**Data(Input):** Input 1, Input 2
 <br>**Output:** Output
-<br>and get **Program** and using the program genrate outputs from new data.
+<br>and get **Program** and using the program generate outputs from new data.
 
 # Classifications of Machine Learning
 
@@ -219,14 +219,14 @@ Test the trained model on a separate dataset of emails to evaluate its performan
 
 ## Algorithms in Supervised Learning
 
-- **Classification goal** is to assign input data to predefined categories or classes. Algorithms like K-Nearest Neighbors (KNN), Logistic Regression, Decision Trees, Support Vector Machines, and Neural Networks are commonly used for classification tasks.
+- **Classification goal** is to assign input data to predefined categories or classes. Algorithms like K-Nearest Neighbors (KNN), Logistic Regression, Decision Trees, Support Vector Machines, and Neural Networks are commonly used for classification tasks.<br>
 **Example Scenario:** Classifying emails as "spam" or "not spam."
 
     - **Input Data:** Features extracted from emails, such as the presence of certain keywords, frequency of specific terms, email length, sender's address, etc.
     - **Output Classes:** "Spam" or "Not Spam."
  
       
-- **Regression goal** is to predict a numerical value based on input features. Algorithms like Linear Regression, Polynomial Regression, and various types of regression trees are used for regression tasks. just give example for both
+- **Regression goal** is to predict a numerical value based on input features. Algorithms like Linear Regression, Polynomial Regression, and various types of regression trees are used for regression tasks.<br>
 **Example Scenario:** Predicting house prices based on various features.
 
     - **Input Data:** Features of houses, such as square footage, number of bedrooms, number of bathrooms, location, age of the house, etc.
@@ -245,3 +245,103 @@ Test the trained model on a separate dataset of emails to evaluate its performan
 **For example:** predicting salary based on years of experience, predicting exam score based on study hours, predicting resale price based on vehicle age.
 
 ![image](https://github.com/user-attachments/assets/2a397e1c-4084-4f81-94c6-132bba97083d)
+
+
+## Types of Regression
+
+1. **Linear Regression**
+   - **Simple Linear Regression:** Models the relationship between a single independent variable and a dependent variable using a straight line.
+     - **Equation:** \( Y = \beta_0 + \beta_1 X \)
+     - **Example:** Predicting salary (Y) based on years of experience (X).
+
+2. **Multiple Linear Regression:** Models the relationship between two or more independent variables and a dependent variable.
+     - **Equation:** \( Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_n X_n \)
+     - **Example:** Predicting house prices (Y) based on square footage (X1), number of bedrooms (X2), and number of bathrooms (X3).
+
+3. **Polynomial Regression:** Models the relationship between the independent variable and the dependent variable as an nth degree polynomial.
+     - **Equation:** \( Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \ldots + \beta_n X^n \)
+     - **Example:** Modeling the growth of a plant over time (Y) based on daily measurements (X).
+  
+
+   
+# Linear Regression
+
+Equation of linear regression: Y= mX + b
+
+- Y represents the dependent variable
+
+- X represents the independent variable
+
+- m is the slope of the line (how much Y changes for a unit change in X).
+
+- b is the intercept (the value of Y when X is 0).
+
+**Project:** Predicting Pizza Prices
+
+Step1: Data Collection
+
+Step2: Calculations
+
+Step3: Prediction
+
+Step4: Visualization
+
+
+| Diameter (X) | Price (Y) | Mean(X) | Mean(Y) | Deviations(X) | Deviations(Y) | Product of Deviations | Sum of Product of Deviations | Square of Deviations for X |
+|--------------|-----------|---------|---------|----------------|---------------|------------------------|------------------------------|----------------------------|
+| 8            | 10        | 10      | 13      | -2             | -3            | 6                      | 12                           | 4                          |
+| 10           | 13        |      |       | 0              | 0             | 0                      |                              | 0                          |
+| 12           | 16        |      |       | 2              | 3             | 6                      |                              | 4                          |
+
+1. **Diameter (X):** The diameter of the pizza in inches.
+2. **Price (Y):** The price of the pizza in dollars.
+3. **Mean(X):** The mean (average) diameter of the pizzas, which is calculated as (8+10+12)/3 = 10 inches.
+4. **Mean(Y):** The mean (average) price of the pizzas, which is calculated as (10+13+16)/3 = 13 dollars.
+5. **Deviations(X):** The deviation of each diameter from the mean diameter.
+   - For 8 inches: 8 - 10 = -2
+   - For 10 inches: 10 - 10 = 0
+   - For 12 inches: 12 - 10 = 2
+6. **Deviations(Y):** The deviation of each price from the mean price.
+   - For $10: 10 - 13 = -3
+   - For $13: 13 - 13 = 0
+   - For $16: 16 - 13 = 3
+7. **Product of Deviations:** The product of the deviations for each pair of values.
+   - For 8 inches and $10: (-2) * (-3) = 6
+   - For 10 inches and $13: 0 * 0 = 0
+   - For 12 inches and $16: 2 * 3 = 6
+8. **Sum of Product of Deviations:** The sum of the products of the deviations: 6 + 0 + 6 = 12.
+9. **Square of Deviations for X:** The square of each deviation for the diameter.
+   - For 8 inches: (-2)^2 = 4
+   - For 10 inches: 0^2 = 0
+   - For 12 inches: 2^2 = 4
+
+#### Calculations
+
+1. **Calculate m (Slope):**
+   \[
+   m = \frac{\text{Sum of product of deviations}}{\text{Sum of square of deviations for X}} = \frac{12}{8} = 1.5
+   \]
+
+2. **Calculate b (Intercept):**
+   \[
+   b = \text{Mean of Y} - (m \times \text{Mean of X}) = 13 - (1.5 \times 10) = 13 - 15 = -2
+   \]
+
+3. **Regression Equation:**
+   \[
+   Y = mX + b = 1.5X - 2
+   \]
+
+4. **Prediction Example:**
+   - For a 20-inch pizza:
+     \[
+     Y = 1.5 \times 20 - 2 = 30 - 2 = 28
+     \]
+   - Predicted price for a 20-inch pizza is $28.
+
+#### Graph
+
+- The graph shows the relationship between the diameter of the pizzas (X-axis) and their prices (Y-axis).
+- The points on the graph represent the given data points (8,10), (10,13), and (12,16).
+- The line represents the linear regression equation \(Y = 1.5X - 2\).
+
