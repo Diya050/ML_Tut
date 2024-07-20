@@ -188,4 +188,47 @@ You need thorough knowledge of your data set. Don't use a dataset with 50%+ miss
 ![image](https://github.com/user-attachments/assets/f1d62059-a43c-44fa-aeed-43b570cff0aa)
 `Note:` This is wrong approach.
 
-Right approach:
+**Right approach:**
+
+![Screenshot from 2024-07-20 12-23-04](https://github.com/user-attachments/assets/664d4725-9cd7-40c8-b5e8-abc7fdd7805c)
+
+
+![Screenshot from 2024-07-20 12-29-48](https://github.com/user-attachments/assets/d12b49fd-c224-4839-a347-dadd6d895035)
+
+
+# Handling Missing Data using Scikit Learn(Used in ML pipeline)
+
+![Screenshot from 2024-07-20 12-39-00](https://github.com/user-attachments/assets/6a21fac5-25cf-47bd-b109-4df33bb5bcb2)
+
+Sure! Let's delve deeper into supervised learning, its steps, and the algorithms used for classification and regression with examples.
+
+# Supervised Learning
+
+Supervised learning is a type of machine learning where the model is trained on labeled data. This means that each training example is paired with an output label. The goal is to learn a mapping from inputs to outputs and make accurate predictions for unseen data.
+
+### Example: Email Spam Detection
+
+#### Step 1: Data Collection
+Collect a dataset of emails labeled as "spam" or "not spam." Each email in the dataset should have features such as the subject line, email body, sender, and other relevant information.
+
+#### Step 2: Training
+Use the labeled dataset to train a model. The model will learn patterns and characteristics of spam and non-spam emails from the training data.
+
+#### Step 3: Testing
+Test the trained model on a separate dataset of emails to evaluate its performance. The goal is to see how well the model can classify new, unseen emails as spam or not spam.
+
+## Algorithms in Supervised Learning
+
+- **Classification goal** is to assign input data to predefined categories or classes. Algorithms like K-Nearest Neighbors (KNN), Logistic Regression, Decision Trees, Support Vector Machines, and Neural Networks are commonly used for classification tasks.
+**Example Scenario:** Classifying emails as "spam" or "not spam."
+
+    - **Input Data:** Features extracted from emails, such as the presence of certain keywords, frequency of specific terms, email length, sender's address, etc.
+    - **Output Classes:** "Spam" or "Not Spam."
+ 
+      
+- **Regression goal** is to predict a numerical value based on input features. Algorithms like Linear Regression, Polynomial Regression, and various types of regression trees are used for regression tasks. just give example for both
+**Example Scenario:** Predicting house prices based on various features.
+
+    - **Input Data:** Features of houses, such as square footage, number of bedrooms, number of bathrooms, location, age of the house, etc.
+    - **Output Value:** The predicted price of the house.
+
